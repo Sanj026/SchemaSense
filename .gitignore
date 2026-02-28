@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.venv_312/
+venv/
+ENV/
+env/
+.env
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+
+# SchemaSense Specific
+app/demo.db
+app/.pytest_cache/
+tests/.pytest_cache/
+backup/
+node_modules/
