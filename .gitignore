@@ -17,9 +17,17 @@ env/
 # SchemaSense Specific
 app/demo.db
 app/.pytest_cache/
-tests/.pytest_cache/
+tests/
+experiments/
+etc/
 backup/
 node_modules/
+*.NBK.py
+*_NBK.py
+*NBKL.py
+untitled*.py
+File structure.py
+check_backend.py
 
 # Unnecessary files
 SCHEMASENSE_HANDOFF_DOCUMENT.md
@@ -28,4 +36,5 @@ supabase_restore.sql.bak
 *.bak
 notebooks/
 scripts/
+
 

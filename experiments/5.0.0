@@ -1,3 +1,0 @@
-Requirement already satisfied: plotly in c:\project1\schemasense\venv\lib\site-packages (6.3.0)
-Requirement already satisfied: narwhals>=1.15.1 in c:\project1\schemasense\venv\lib\site-packages (from plotly) (2.1.2)
-Requirement already satisfied: packaging in c:\project1\schemasense\venv\lib\site-packages (from plotly) (25.0)
