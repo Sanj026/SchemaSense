@@ -20,3 +20,12 @@ app/.pytest_cache/
 tests/.pytest_cache/
 backup/
 node_modules/
+
+# Unnecessary files
+SCHEMASENSE_HANDOFF_DOCUMENT.md
+seed_demo.py
+supabase_restore.sql.bak
+*.bak
+notebooks/
+scripts/
+
