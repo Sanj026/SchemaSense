@@ -20,10 +20,8 @@ Supports OpenRouter (primary) and Prem-1B-SQL (fallback)
 
 import requests
 import os
-from dotenv import load_dotenv
-from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
-import torch
 import re
+from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
@@ -47,6 +45,10 @@ def setup_prem_engine():
         return prem_pipeline, prem_tokenizer
 
     try:
+        # Lazy imports — only loaded if OpenRouter fails, keeping startup memory low
+        from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
+        import torch
+
         print("🚀 Loading Prem-1B-SQL model...")
         model_name = "PremalMatalia/Prem-1B-SQL"
 
