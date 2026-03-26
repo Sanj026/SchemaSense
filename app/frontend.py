@@ -17,9 +17,11 @@ import time
 import plotly.express as px
 import numpy as np
 import base64
+import os
 from io import BytesIO
 
-API_BASE = "http://localhost:8000"
+# Read backend URL from environment variable (set on Render), fallback to localhost for local dev
+API_BASE = os.getenv("API_BASE_URL", "http://localhost:8000").rstrip("/")
 
 st.set_page_config(
     page_title="SchemaSense - Production NL2SQL",

@@ -1,0 +1,26 @@
+services:
+  # ── Backend: FastAPI ──────────────────────────────────────────────
+  - type: web
+    name: schemasense-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    envVars:
+      - key: SUPABASE_URL
+        sync: false          # set manually in Render dashboard
+      - key: SUPABASE_KEY
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: AI_ENGINE
+        value: openrouter
+
+  # ── Frontend: Streamlit ───────────────────────────────────────────
+  - type: web
+    name: schemasense-frontend
+    runtime: python
+    buildCommand: pip install -r requirements-frontend.txt
+    startCommand: streamlit run app/frontend.py --server.port 8501 --server.address 0.0.0.0
+    envVars:
+      - key: API_BASE_URL
+        sync: false          # set to the schemasense-api URL after backend deploys
